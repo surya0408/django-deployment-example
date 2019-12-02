@@ -1,0 +1,9 @@
+{% extends 'myApp/base.html' %}
+{% load myextras %}
+	{% block container_block %}
+		<h1>Welcome to the index Page!</h1>
+		{{ cntxt_dict|sayHi }}
+		<a href="{% url 'myApp:other' %}">Link to Other page</a>
+		<a href="{% url 'myApp:last' %}">Link to the Last page</a>
+		<a href="{% url 'admin:index' %}">Link to the admin page</a>
+	{% endblock %}
